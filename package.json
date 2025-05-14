@@ -1,0 +1,55 @@
+{
+    "name": "@teachoco-official/redux",
+    "version": "0.0.1",
+    "private": false,
+    "description": "javascript npm library create by teachoco-official",
+    "type": "module",
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/types/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "scripts": {
+        "test": "jest",
+        "dev": "vite --host 127.0.0.1 --port 5001",
+        "sb": "pnpm run storybook",
+        "prepare": "npm run build",
+        "build": "rm -rf ./dist & rollup -c",
+        "public": "npm publish --scope=@teachoco-official --access=public",
+        "publicforce": "npm publish --scope=@teachoco-official --access=public --force",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "storybook build",
+        "installs": "pnpm install --save vite react react-dom react-router-dom @types/react @types/react-dom @vitejs/plugin-react-swc rollup rollup-plugin-peer-deps-external @rollup/plugin-commonjs @rollup/plugin-node-resolve @rollup/plugin-typescript recoil tslib typescript"
+    },
+    "peerDependencies": {
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
+    },
+    "author": "teachoco-official",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TeaChocoOfficial"
+    },
+    "dependencies": {
+        "@rollup/plugin-commonjs": "^28.0.2",
+        "@rollup/plugin-node-resolve": "^16.0.0",
+        "@rollup/plugin-typescript": "^12.1.2",
+        "@types/react": "^19.0.2",
+        "@types/react-dom": "^19.0.2",
+        "@vitejs/plugin-react-swc": "^3.7.2",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "react-router-dom": "^7.1.0",
+        "rollup": "^4.29.1",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "tslib": "^2.8.1",
+        "typescript": "^5.7.2",
+        "vite": "^6.0.5"
+    }
+}
