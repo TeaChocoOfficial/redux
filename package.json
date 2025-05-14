@@ -34,7 +34,7 @@
     "license": "ISC",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/TeaChocoOfficial"
+        "url": "git+https://github.com/TeaChocoOfficial/redux"
     },
     "dependencies": {
         "@rollup/plugin-commonjs": "^28.0.2",
