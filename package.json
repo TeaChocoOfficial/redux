@@ -6,7 +6,7 @@
     "type": "module",
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
-    "types": "dist/types/index.d.ts",
+    "types": "dist/types/src/index.d.ts",
     "files": [
         "dist"
     ],
@@ -28,28 +28,41 @@
     },
     "peerDependencies": {
         "react": "^19.0.0",
-        "react-dom": "^19.0.0"
+        "react-dom": "^19.0.0",
+        "@reduxjs/toolkit": "^2.8.2",
+        "@types/redux-logger": "^3.0.13",
+        "react-redux": "^9.2.0",
+        "redux": "^5.0.1",
+        "redux-logger": "^3.0.6"
     },
     "author": "teachoco-official",
     "license": "ISC",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/TeaChocoOfficial/redux"
+        "url": "git+https://github.com/TeaChocoOfficial"
     },
     "dependencies": {
+        "@reduxjs/toolkit": "^2.8.2",
         "@rollup/plugin-commonjs": "^28.0.2",
         "@rollup/plugin-node-resolve": "^16.0.0",
         "@rollup/plugin-typescript": "^12.1.2",
         "@types/react": "^19.0.2",
         "@types/react-dom": "^19.0.2",
+        "@types/redux-logger": "^3.0.13",
         "@vitejs/plugin-react-swc": "^3.7.2",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
+        "react-redux": "^9.2.0",
         "react-router-dom": "^7.1.0",
+        "redux": "^5.0.1",
+        "redux-logger": "^3.0.6",
         "rollup": "^4.29.1",
         "rollup-plugin-peer-deps-external": "^2.2.4",
         "tslib": "^2.8.1",
         "typescript": "^5.7.2",
         "vite": "^6.0.5"
+    },
+    "devDependencies": {
+        "rollup-plugin-dts": "^6.2.1"
     }
 }

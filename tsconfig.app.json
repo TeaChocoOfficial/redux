@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+        "target": "ESNext",
+        "useDefineForClassFields": true,
+        "lib": ["ES2020", "DOM", "esnext", "DOM.Iterable"],
+        "module": "ESNext",
+        "skipLibCheck": true,
+        "declaration": true,
+        "declarationDir": "./dist/types",
+        "moduleResolution": "node",
+        "verbatimModuleSyntax": true,
+        "moduleDetection": "force",
+        "outDir": "./dist",
+        "noEmit": false, // เปลี่ยนเป็น false
+        "jsx": "react-jsx",
+        "paths": {
+            "@teachoco-official/redux": ["./src/index.ts"]
+        },
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "erasableSyntaxOnly": false,
+        "noFallthroughCasesInSwitch": true,
+        "noUncheckedSideEffectImports": true
+    },
+    "include": ["src/**/*", "view"]
+
+}

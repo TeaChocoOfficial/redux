@@ -23,7 +23,7 @@ export default {
         resolve(),
         commonjs(),
         typescript({
-            tsconfig: './tsconfig.json',
+            tsconfig: './tsconfig.app.json',
             sourceMap: true,
             exclude: ['**/*.stories.ts', './src/view/**', './src/stories/**'], // ข้ามไฟล์ .stories.ts ทุกตั
         }),
