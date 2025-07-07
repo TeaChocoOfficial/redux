@@ -1,4 +1,4 @@
-//-Path: "redux/src/hook/ReduxProvider.tsx"
+//-Path: "redux/lib/src/hook/ReduxProvider.tsx"
 import { Provider } from 'react-redux';
 import { ReduxStore } from './ReduxStore';
 import type { ReduxProviderProps } from '../types/redux';
@@ -10,7 +10,7 @@ export function ReduxProvider({
 }: ReduxProviderProps) {
     return (
         <Provider
-            store={store ?? (reduxStore ?? new ReduxStore({})).getStore()}
+            store={store ?? (reduxStore ?? new ReduxStore({})).store}
             {...props}
         />
     );

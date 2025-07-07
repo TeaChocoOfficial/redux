@@ -1,6 +1,6 @@
-//-Path: "redux/src/hook/ReduxStore.tsx"
-import { Obj } from './obj';
+//-Path: "redux/lib/src/hook/ReduxStore.tsx"
 import { logger } from 'redux-logger';
+import { Obj } from '@teachoco-dev/cli';
 import { ReduxSlice } from './ReduxSlice';
 import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers, type Reducer } from 'redux';
@@ -9,11 +9,11 @@ import type { GetDefaultMiddleware } from '../types/reduxjs_toolkit';
 
 export class ReduxStore {
     constructor(
-        public store: ReduxStores,
+        public stores: ReduxStores,
         public devTools = false,
         public log = false,
     ) {}
-    private getReducer() {
+    get reducer() {
         function storeToReducer(store: ReduxStores): Reducer {
             const reducerMap = Obj.reduce(
                 store,
@@ -28,7 +28,7 @@ export class ReduxStore {
             );
             return combineReducers(reducerMap);
         }
-        return storeToReducer(this.store);
+        return storeToReducer(this.stores);
     }
     private middleware(getDafualtMiddleware: GetDefaultMiddleware) {
         return getDafualtMiddleware();
@@ -45,10 +45,10 @@ export class ReduxStore {
                 : getDafual.concat()
             : getDafual;
     }
-    public getStore() {
+    get store() {
         return configureStore({
+            reducer: this.reducer,
             devTools: this.devTools,
-            reducer: this.getReducer(),
             middleware: (getDefaultMiddleware) =>
                 this.priMiddleware(getDefaultMiddleware),
         });

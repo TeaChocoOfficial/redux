@@ -1,0 +1,50 @@
+{
+    "name": "@teachoco-official/redux",
+    "version": "0.0.2",
+    "private": false,
+    "description": "view javascript npm library create by teachoco-official",
+    "type": "module",
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/types/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "scripts": {
+        "test": "jest",
+        "dev": "vite --host 127.0.0.1 --port 5001",
+        "sb": "pnpm run storybook",
+        "build": "vite build",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "storybook build"
+    },
+    "peerDependencies": {
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
+    },
+    "author": "teachoco-official",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TeaChocoOfficial"
+    },
+    "dependencies": {
+        "@reduxjs/toolkit": "^2.8.2",
+        "@teachoco-dev/cli": "^0.0.5",
+        "@types/react": "^19.1.8",
+        "@types/react-dom": "^19.1.6",
+        "@vitejs/plugin-react-swc": "^3.10.2",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
+        "react-redux": "^9.2.0",
+        "react-router-dom": "^7.6.3",
+        "redux": "^5.0.1",
+        "redux-logger": "^3.0.6",
+        "typescript": "^5.8.3",
+        "vite": "^6.3.5"
+    }
+}

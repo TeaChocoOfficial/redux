@@ -9,9 +9,11 @@
         /* Bundler mode */
         "moduleResolution": "bundler",
         "allowImportingTsExtensions": true,
-        "verbatimModuleSyntax": true,
         "moduleDetection": "force",
         "noEmit": true,
+        "paths": {
+            "@teachoco-official/redux": ["./lib/index.ts"]
+        },
 
         /* Linting */
         "strict": true,

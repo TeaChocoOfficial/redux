@@ -1,4 +1,4 @@
-//-Path: "redux/src/hook/ReduxSlice.tsx"
+//-Path: "redux/lib/src/hook/ReduxSlice.tsx"
 import type {
     Slice,
     SliceSelectors,
@@ -8,7 +8,7 @@ import type {
     ActionReducerMapBuilder,
     ValidateSliceCaseReducers,
 } from '@reduxjs/toolkit';
-import { Obj } from './obj';
+import { Obj } from '@teachoco-dev/cli';
 import { createSlice } from '@reduxjs/toolkit';
 import type { RootState } from '../types/redux';
 import { useDispatch, useSelector } from 'react-redux';
@@ -60,8 +60,13 @@ export class ReduxSlice<
                 ...acc,
                 [key]: () => {
                     const dispatch = useDispatch();
-                    return (payload: Parameters<typeof action>[0]) =>
-                        dispatch(action(payload));
+                    return (payload: Parameters<typeof action>[0]) => {
+                        try {
+                            dispatch(action(payload));
+                        } catch (error) {
+                            console.error(error);
+                        }
+                    };
                 },
             }),
             {} as Actions,
