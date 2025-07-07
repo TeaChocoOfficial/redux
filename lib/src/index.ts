@@ -1,4 +1,4 @@
-//-Path: "redux/src/index.ts"
+//-Path: "redux/lib/src/index.ts"
 export * from './hook/ReduxProvider';
 export * from './hook/ReduxSlice';
 export * from './hook/ReduxStore';

@@ -2,10 +2,10 @@
 import { logger } from 'redux-logger';
 import { Obj } from '@teachoco-dev/cli';
 import { ReduxSlice } from './ReduxSlice';
+import { combineReducers, Reducer } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
-import { combineReducers, type Reducer } from 'redux';
-import type { MiddlewareConfig, ReduxStores } from '../types/redux';
-import type { GetDefaultMiddleware } from '../types/reduxjs_toolkit';
+import { MiddlewareConfig, ReduxStores } from '../types/redux';
+import { GetDefaultMiddleware } from '../types/reduxjs_toolkit';
 
 export class ReduxStore {
     constructor(

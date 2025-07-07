@@ -23,6 +23,7 @@
     },
     "peerDependencies": {
         "@reduxjs/toolkit": "^2.8.2",
+        "@teachoco-dev/cli": "^0.0.5",
         "@types/redux-logger": "^3.0.13",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
@@ -37,6 +38,7 @@
         "url": "git+https://github.com/TeaChocoOfficial"
     },
     "dependencies": {
+        "@reduxjs/toolkit": "^2.8.2",
         "@teachoco-dev/cli": "^0.0.5",
         "@types/react": "^19.0.2",
         "@types/react-dom": "^19.0.2",

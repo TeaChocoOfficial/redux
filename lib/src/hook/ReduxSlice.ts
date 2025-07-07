@@ -1,5 +1,5 @@
 //-Path: "redux/lib/src/hook/ReduxSlice.tsx"
-import type {
+import {
     Slice,
     SliceSelectors,
     ReducerCreators,
@@ -9,15 +9,15 @@ import type {
     ValidateSliceCaseReducers,
 } from '@reduxjs/toolkit';
 import { Obj } from '@teachoco-dev/cli';
+import { RootState } from '../types/redux';
 import { createSlice } from '@reduxjs/toolkit';
-import type { RootState } from '../types/redux';
 import { useDispatch, useSelector } from 'react-redux';
 
 export class ReduxSlice<
     State,
-    CR extends SliceCaseReducers<State>,
-    Name extends string,
-    ReducerPath extends string,
+    CR extends SliceCaseReducers<State> = SliceCaseReducers<State>,
+    Name extends string = string,
+    ReducerPath extends string = string,
     Selectors extends SliceSelectors<State> = SliceSelectors<State>,
 > {
     slice: Slice<State, CR, Name, ReducerPath, Selectors>;

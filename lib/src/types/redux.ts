@@ -1,14 +1,9 @@
-//-Path: "redux/src/types/redux.ts"
-import type {
-    Store,
-    Action,
-    UnknownAction,
-    PayloadAction,
-} from '@reduxjs/toolkit';
+//-Path: "redux/lib/src/types/redux.ts"
+import { ProviderProps } from 'react-redux';
 import { ReduxSlice } from '../hook/ReduxSlice';
 import { ReduxStore } from '../hook/ReduxStore';
-import type { ProviderProps } from 'react-redux';
-import type { GetDefaultMiddleware } from './reduxjs_toolkit';
+import { GetDefaultMiddleware } from './reduxjs_toolkit';
+import { Store, Action, UnknownAction, PayloadAction } from '@reduxjs/toolkit';
 
 export type ReduxProviderProps<
     A extends Action<string> = UnknownAction,

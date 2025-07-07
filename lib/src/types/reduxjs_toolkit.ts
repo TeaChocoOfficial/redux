@@ -1,6 +1,6 @@
 //-Path: "redux/src/types/reduxjs_toolkit.ts"
-import type { UnknownAction } from 'redux';
-import type { ThunkMiddleware } from '@reduxjs/toolkit';
+import { UnknownAction } from 'redux';
+import { ThunkMiddleware } from '@reduxjs/toolkit';
 
 type IsImmutableFunc = (value: any) => boolean;
 
